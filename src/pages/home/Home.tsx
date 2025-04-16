@@ -1,5 +1,9 @@
+import CardCategoria from "../../components/categorias/cardcategoria/CardCategoria";
+import ListaCategorias from "../../components/categorias/listacategorias/ListaCategorias";
+
 function Home() {
     return (
+        <>
         <div className="bg-fuchsia-900 flex justify-center">
             <div className='container grid grid-cols-2 text-white'>
                 <div className="flex flex-col gap-4 items-center justify-center py-4">
@@ -11,7 +15,7 @@ function Home() {
                     </p>
 
                     <div className="flex justify-around gap-4">
-                        <div className='rounded text-white border-white border-solid border-2 py-2 px-4'>
+                        <div className=' text-white'>
                         Se até seu deploy precisa de saúde,
                         imagina você.
                         </div>
@@ -25,7 +29,11 @@ function Home() {
                     />
                 </div>
             </div>
-        </div>
+        </div>  
+
+        <ListaCategorias />
+</>
+
     );
 }
 
