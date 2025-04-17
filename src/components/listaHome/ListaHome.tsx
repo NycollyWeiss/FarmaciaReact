@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import CardCategoria from "../cardcategoria/CardCategoria";
+import CardCategoria from "../categorias/cardcategoria/CardCategoria";
 import { useState, useEffect } from "react";
-import Categoria from "../../../models/Categoria";
-import { buscar } from "../../../services/Service";
+import Categoria from "../../models/Categoria";
+import { buscar } from "../../services/Service";
 import { DNA } from 'react-loader-spinner';
 
 function ListaCategorias() {
@@ -41,10 +41,10 @@ function ListaCategorias() {
             <div className="flex justify-center w-full my-4">
                 <div className="container flex flex-col">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {categorias.map((categoria) => ( 
+                        {categorias.slice(0,6).map((categoria) => (
                             <CardCategoria key={categoria.id} categoria={categoria} />
                         ))}
-                    </div>s
+                    </div>
                 </div>
             </div>
         </>

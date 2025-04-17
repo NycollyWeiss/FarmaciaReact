@@ -7,32 +7,31 @@ interface CardCategoriaProps {
 
 function CardCategoria({ categoria }: CardCategoriaProps) {
     return (
-        <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
-            <header className='py-2 px-6 bg-fuchsia-900 text-white font-bold text-2xl'>
-                Categoria
+        <div className='border-[5px] h-[160px] justify-center items-center border-fuchsia-900 flex flex-col w-[370px] rounded-[15px] overflow-hidden'>
+            <header className='py-0.5 pt-[40px] px-1 bg-white text-fuchsia-900 font-bold text-2xl '>
+                {categoria.nome}
             </header>
-            <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.descricao}</p>
+            <p className=' text-[70x] bg-white h-full'>{categoria.descricao}</p>
 
-            <div className="flex">
-                <Link
-                    to={`/editarcategoria/${categoria.id}`}
-                    className='w-full text-slate-100 bg-indigo-400 hover:bg-indigo-800 
-                    flex items-center justify-center py-2'
-                >
-                    Editar
-                </Link>
+            <div className="flex space-x-3 py-1 gap-4 mb-[40px] justify-center items-center place-content-evenly pb-[px] pt-[10px]">
+                    <Link
+                        to={`/editarcategoria/${categoria.id}`}
+                        className="w-[150px] text-black bg-blue-300 hover:bg-blue-400 
+                        border-[1.5px] border-black rounded-[9px]
+                        flex items-center justify-center py-3 text-lg font-semibold">
+                        Editar
+                        </Link>
+                        <Link
+                            to={`/deletarcategoria/${categoria.id}`}
+                            className="w-[150px] text-black bg-red-400 hover:bg-red-500  
+                                    border-[1.5px] border-black rounded-[9px]
+                                    flex items-center justify-center py-3  text-lg font-semibold">
+                                    Apagar
+                        </Link>
+                        </div>
 
-                <Link
-                    to={`/deletarcategoria/${categoria.id}`}
-                    className='w-full text-slate-100 bg-red-400 hover:bg-red-700 
-                    flex items-center justify-center py-2'
-                >
-                    Deletar
-                </Link>
-            </div>
         </div>
     );
 }
 
 export default CardCategoria;
-

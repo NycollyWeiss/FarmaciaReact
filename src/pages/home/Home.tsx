@@ -1,5 +1,5 @@
 import CardCategoria from "../../components/categorias/cardcategoria/CardCategoria";
-import ListaCategorias from "../../components/categorias/listacategorias/ListaCategorias";
+import ListaHome from "../../components/listaHome/ListaHome";
 
 function Home() {
     return (
@@ -10,12 +10,12 @@ function Home() {
                     <h2 className='text-5xl font-bold'>
 
                     </h2>
-                    <p className='text-6xl font-'>
+                    <p className='text-8xl font-caveat font-extralight '>
                     FarmaGen
                     </p>
 
-                    <div className="flex justify-around gap-4">
-                        <div className=' text-white'>
+                    <div className="flex text-2xl justify-around gap-4 ">
+                        <div className=' text-white  font-extralight font-caveat'>
                         Se até seu deploy precisa de saúde,
                         imagina você.
                         </div>
@@ -31,7 +31,7 @@ function Home() {
             </div>
         </div>  
 
-        <ListaCategorias />
+        <ListaHome />
 </>
 
     );
